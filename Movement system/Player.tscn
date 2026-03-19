@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bx2ci2ipv2vna"]
+
+[ext_resource type="Script" uid="uid://dsgc7n2mbijy0" path="res://character_body_2d.gd" id="1_kpjcp"]
+[ext_resource type="Texture2D" uid="uid://dn6nvea65m1m6" path="res://icon.svg" id="2_kne1u"]
+[ext_resource type="Script" uid="uid://bti342107oak1" path="res://sprite_2d.gd" id="3_kne1u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kne1u"]
+size = Vector2(130, 129)
+
+[node name="Node2D" type="Node2D" unique_id=2035646666]
+position = Vector2(3, 269)
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=687241933]
+position = Vector2(-560, 0)
+script = ExtResource("1_kpjcp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=473492410]
+position = Vector2(1145, 2)
+texture = ExtResource("2_kne1u")
+script = ExtResource("3_kne1u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=322461951]
+position = Vector2(1149, 0)
+shape = SubResource("RectangleShape2D_kne1u")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Player" unique_id=1559195597]
+
+[node name="DashBar" type="ProgressBar" parent="Player/CanvasLayer" unique_id=342627309]
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.88000005
+anchor_right = 1.0
+anchor_bottom = 0.88000005
+offset_left = -351.0
+offset_top = -542.24005
+offset_right = -21.0
+offset_bottom = -507.24005
+grow_horizontal = 0
